@@ -1,0 +1,24 @@
+{% load transactiontools %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>redirecting</title>
+  </head>
+  <body onload="document.redirect.submit()">
+    <form action="http://payments.webcourse.niksula.hut.fi/pay/" method="POST" name="redirect">
+        <input type="hidden" name="pid" value="{{transact.trID}}" />
+        <input type="hidden" name="sid" value="GameXChangers" />
+        <input type="hidden" name="success_url"
+            value="http://{{ request.get_host }}/store/transactionsuccess" />
+        <input type="hidden" name="cancel_url"
+            value="http://{{ request.get_host }}/store/transactioncancel" />
+        <input type="hidden" name="error_url"
+            value="http://{{ request.get_host }}/store/transactionfailure" />
+        <input type="hidden" name="checksum"
+            value = {% getChecksum transact.price transact.trID %} />
+        <input type="hidden" name="amount" value={{transact.game.price}}>
+    </form>
+  </body>
+</html>

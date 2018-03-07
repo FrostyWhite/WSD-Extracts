@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'css/transaction.css' %}">{% endblock %}
+
+{% block title %}Transaction canceled{% endblock %}
+
+{% block content %}
+<div class="transactionresult">
+  <img src="{% static "resources/cancel.png" %}" alt="Cancel" width="90%">
+  <h2>You have canceled the transaction</h2>
+</div>
+{% endblock %}

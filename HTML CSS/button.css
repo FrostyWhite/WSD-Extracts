@@ -1,0 +1,25 @@
+/* Some styling to make buttons irresistable */
+
+.button {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    height: 40px;
+    width: 50%;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #fff;
+    color: #4CAF50;
+}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block css %}<link rel="stylesheet" href="{% static 'css/transaction.css' %}">{% endblock %}
+
+{% block title %}Transaction failed{% endblock %}
+
+{% block content %}
+<div class="transactionresult">
+  <img src="{% static "resources/failure.png" %}" alt="Failure" width="90%">
+  <h2>Oh no, something went wrong!</h2>
+</div>
+{% endblock %}
